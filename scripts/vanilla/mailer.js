@@ -11,8 +11,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var transporter = _nodemailer.default.createTransport({
   service: 'gmail',
   auth: {
-    user: 'nicola.bertelloni@gmail.com',
-    pass: 'n@67541238'
+    user: '',
+    pass: ''
   }
 });
 
@@ -22,9 +22,9 @@ _fs.default.readFile(pathToHtmlResult, 'utf8', function (err, data) {
   // CHECK: for errors
   if (err) throw err;
   var mailOptions = {
-    from: 'nicola.bertelloni@fifthbeat.com',
-    to: 'nicola.bertelloni@gmail.com',
-    subject: 'Sending Email using Node.js',
+    from: '',
+    to: '',
+    subject: '### Email Test UI ###',
     html: data
   };
   transporter.sendMail(mailOptions, function (error, info) {
