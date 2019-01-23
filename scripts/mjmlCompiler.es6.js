@@ -22,10 +22,7 @@ const walkSync = (dir, filelist = []) => {
 const components = walkSync(pathToComponents);
 
 // STEP: rgistering the components
-components.forEach(d => {
-  console.log(d);
-  registerComponent(require(d).default);
-});
+components.forEach(d => registerComponent(require(d).default));
 
 // STEP: configuring the mjml compiler
 const options = {

@@ -33,8 +33,7 @@ var walkSync = function walkSync(dir) {
 var components = walkSync(pathToComponents); // STEP: rgistering the components
 
 components.forEach(function (d) {
-  console.log(d);
-  (0, _mjmlCore.registerComponent)(require(d).default);
+  return (0, _mjmlCore.registerComponent)(require(d).default);
 }); // STEP: configuring the mjml compiler
 
 var options = {
