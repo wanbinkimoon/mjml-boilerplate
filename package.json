@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "watch-js": "babel -w src --out-dir dist --config.beautify",
-    "watch-mjml": "node scripts/mjmlCompiler.js",
+    "watch-mjml": "node scripts/vanilla/mjmlCompiler.js",
     "server": "live-server --port=1230 --watch=dist/ --entry-file=dist/index.html",
     "start": "concurrently -c  magenta,cyan,green -n js,mjml,server \"npm run watch-js\" \"npm run watch-mjml\" \"npm run server\"",
     "compile-js": "babel src --out-dir dist --config.beautify",
-    "compile-node": "babel scripts/mjmlCompiler.es6.js -o scripts/mjmlCompiler.js --config.minify=TRUE"
+    "compile-node": "babel scripts/es6 --out-dir scripts/vanilla"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "live-server": "^1.2.1",
-    "mjml": "^4.3.1"
+    "mjml": "^4.3.1",
+    "nodemailer": "^5.1.1"
   }
 }
