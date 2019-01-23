@@ -1,16 +1,13 @@
 <mjml>
   <mj-head>
     <mj-title>MARKETO TEST</mj-title>
-    <mj-font name="Roboto" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" />
+    <mj-font name="Roboto" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700"></mj-font>
   </mj-head>
-
-  <mj-body background-color="#eee" width="700px">
-    <mj-container>
-      <mj-section>
-        <mj-column>
-          <mj-text>Tu ma</mj-text>
-        </mj-column>
-      </mj-section>
-    </mj-container>
+  <mj-body>
+    <mj-section>
+      <mj-column>
+        <mj-text>hello world! pippo</mj-text>
+      </mj-column>
+    </mj-section>
   </mj-body>
 </mjml>
